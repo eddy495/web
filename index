@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Sitio Moderno</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-image: url('https://images.unsplash.com/photo-1506765515384-028b60a970df');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e60000;
+    }
+
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenido a Mi Web Moderna</h1>
+    <p>Explora mi trabajo, conoce mis habilidades y contáctame si quieres colaborar.</p>
+    <button class="btn" onclick="document.getElementById('portafolio').scrollIntoView({ behavior: 'smooth' });">
+      Ver Portafolio
+    </button>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#portafolio">Portafolio</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="portafolio">
+    <h2>Mi Portafolio</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?technology" alt="Proyecto 1">
+        <div class="card-body">
+          <h3>Proyecto Tecnológico</h3>
+          <p>Un proyecto moderno enfocado en innovación digital.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?design" alt="Proyecto 2">
+        <div class="card-body">
+          <h3>Diseño Creativo</h3>
+          <p>Un diseño visual impactante con estética profesional.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?app" alt="Proyecto 3">
+        <div class="card-body">
+          <h3>Aplicación Móvil</h3>
+          <p>Una app intuitiva y fácil de usar para dispositivos móviles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p style="text-align: center;">
+      Puedes escribirme a: <strong>ejemplo@correo.com</strong><br>
+      O seguirme en redes sociales: <br><br>
+      <a class="btn" href="#">Instagram</a>
+      <a class="btn" href="#">LinkedIn</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mi Sitio Moderno. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
